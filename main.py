@@ -7,7 +7,7 @@ from cmt_config import CMTConfig
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pause_unpause_bool', required=True)
+    parser.add_argument('--pause_unpause_bool', required=False)
     parser.add_argument('--config_repo_path', required=True)
     parser.add_argument('--source_system', required=True)
     parser.add_argument('--pipeline', required=True, help='Name of the pipeline. Accepted values: gold, silver, cmt.')
@@ -22,14 +22,15 @@ def main():
     args = get_args()
     
     print("User Input Arguments:")
+    print("-"*50)
     print(f"Pause/Unpause: {args.pause_unpause_bool}")
     print(f"Config Repo Path: {args.config_repo_path}")
     print(f"Source System: {args.source_system}")
     print(f"Pipeline: {args.pipeline}")
     print(f"Environment: {args.env}")
     print(f"Territory: {args.territory}")
-    print(f"Table Names: {args.table_names} {len(args.table_names)}")
-    print(f"Task Names: {args.table_names} {len(args.task_names)}")
+    print(f"Table Names: {args.table_names}")
+    print(f"Task Names: {args.task_names}")
 
     if args.pipeline == "gold" and not args.task_names:
         print("Error: task_names is required when pipeline is gold.")
@@ -40,23 +41,25 @@ def main():
         return
     
     if args.pipeline == 'cmt' and not args.cmt_version:
-        raise ValueError("cmt_version is a required argument when pipeline is cmt.")
+        print("Error: cmt_version is a required argument when pipeline is cmt.")
+        return
+        
 
     if args.pipeline == 'silver':
+        print("\n🥈 Updating Silver pipelines\n")
         SilverConfig(args.config_repo_path, args.source_system, args.env, args.territory).remove_table_entries(args.table_names)
     elif args.pipeline == "gold":
-        print(args.task_names)
-        gold_config = GoldConfig(args.config_repo_path, args.source_system, args.env, args.territory)
-        gold_config.remove_tasks_from_workflow(args.task_names)
+        print("\n🥇 Updating Gold pipelines\n")
+        GoldConfig(args.config_repo_path, args.source_system, args.env, args.territory).remove_tasks_from_workflow(args.task_names)
     elif args.pipeline == 'cmt':
-        cmt_config = CMTConfig(args.config_repo_path, args.source_system, args.territory)
-        cmt_config.update_artifact_version(args.cmt_version)
+        print("\n🛠 Updating CMT pipelines\n")
+        CMTConfig(args.config_repo_path, args.source_system, args.territory).update_artifact_version(args.cmt_version)
     else:
         raise ValueError("Please check your input arguments.")
         
 
 # if __name__ == '__main__':
-    # main()
+#     main()
 
 # remove_table_entries("../vitruvian-deployment-configurations/","excite","prod","na-us-pa",["compensation_v1"])
 # goldconfig = GoldConfig("../vitruvian-deployment-configurations/","excite","int","na-us-nj")
@@ -81,5 +84,14 @@ def run_all_gold(config_repo_path, source_system, task_names):
         config = GoldConfig(config_repo_path, source_system, env, territory)
         config.remove_tasks_from_workflow(task_names)
 
-run_all_silver("../vitruvian-deployment-configurations/", "excite", ["compensation_v1"])
-run_all_gold("../vitruvian-deployment-configurations/", "excite", ["fct_compensation_event","fct_payment_event"])
+
+def run_all_cmt(config_repo_path, source_system, cmt_version):
+    print("\n🛠 Updating CMT pipelines\n")
+    for territory in TERRITORIES:
+        print("\nFor: ", territory, "\n-------------") 
+        config = CMTConfig(config_repo_path, source_system, territory)
+        config.update_artifact_version(cmt_version)
+
+# run_all_silver("../vitruvian-deployment-configurations/", "excite", ["compensation_v1"])
+# run_all_gold("../vitruvian-deployment-configurations/", "excite", ["fct_compensation_event","fct_payment_event"])
+run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.534")
