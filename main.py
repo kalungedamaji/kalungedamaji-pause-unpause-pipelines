@@ -1,5 +1,6 @@
 import argparse
 import itertools
+import os
 
 from silver_config import SilverConfig
 from gold_config import GoldConfig
@@ -73,14 +74,11 @@ def main():
         raise ValueError("Please check your input arguments.")
 
 
-# if __name__ == '__main__':
-#     main()
+os.makedirs("paused", exist_ok=True)
 
-# remove_table_entries("../vitruvian-deployment-configurations/","excite","prod","na-us-pa",["compensation_v1"])
-# goldconfig = GoldConfig("../vitruvian-deployment-configurations/","excite","int","na-us-nj")
-# goldconfig.remove_tasks_from_workflow(["fct_compensation_event","fct_payment_event"])
-# cmt_config = CMTConfig("../vitruvian-deployment-configurations/", "excite", "na-us-nj")
-# cmt_config.update_artifact_version("1.0.524")
+
+# if __name__ == "__main__":
+#     main()
 
 ENVS = ["int", "prod"]
 TERRITORIES = ["na-us-nj", "na-us-pa", "na-ca-on", "eu"]
@@ -113,3 +111,13 @@ def run_all_cmt(config_repo_path, source_system, cmt_version):
 # run_all_silver("../vitruvian-deployment-configurations/", "excite", ["comp_type_v1"])
 # run_all_gold("../vitruvian-deployment-configurations/", "excite", ["fct_compensation_event","fct_payment_event"])
 # run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.534")
+
+
+silverConfig = SilverConfig(
+    "../vitruvian-deployment-configurations/", "excite", "int", "na-us-nj"
+)
+silverConfig.remove_table_entries(["comp_type_v1"])
+# goldconfig = GoldConfig("../vitruvian-deployment-configurations/","excite","int","na-us-nj")
+# goldconfig.remove_tasks_from_workflow(["fct_compensation_event","fct_payment_event"])
+# cmt_config = CMTConfig("../vitruvian-deployment-configurations/", "excite", "na-us-nj")
+# cmt_config.update_artifact_version("1.0.524")
