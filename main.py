@@ -57,19 +57,17 @@ def main():
 
     if args.pipeline == "silver":
         print("\n🥈 Updating Silver pipelines\n")
-        SilverConfig(
-            args.config_repo_path, args.source_system, args.env, args.territory
-        ).remove_table_entries(args.table_names)
+        SilverConfig(args.config_repo_path, args.source_system, args.env, args.territory).remove_table_entries(
+            args.table_names
+        )
     elif args.pipeline == "gold":
         print("\n🥇 Updating Gold pipelines\n")
-        GoldConfig(
-            args.config_repo_path, args.source_system, args.env, args.territory
-        ).remove_tasks_from_workflow(args.task_names)
+        GoldConfig(args.config_repo_path, args.source_system, args.env, args.territory).remove_tasks_from_workflow(
+            args.task_names
+        )
     elif args.pipeline == "cmt":
         print("\n🛠 Updating CMT pipelines\n")
-        CMTConfig(
-            args.config_repo_path, args.source_system, args.territory
-        ).update_artifact_version(args.cmt_version)
+        CMTConfig(args.config_repo_path, args.source_system, args.territory).update_artifact_version(args.cmt_version)
     else:
         raise ValueError("Please check your input arguments.")
 
@@ -110,14 +108,12 @@ def run_all_cmt(config_repo_path, source_system, cmt_version):
 
 # run_all_silver("../vitruvian-deployment-configurations/", "excite", ["comp_type_v1"])
 # run_all_gold("../vitruvian-deployment-configurations/", "excite", ["fct_compensation_event","fct_payment_event"])
-# run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.534")
+run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.563")
 
-
-silverConfig = SilverConfig(
-    "../vitruvian-deployment-configurations/", "excite", "int", "na-us-nj"
-)
-silverConfig.remove_table_entries(["comp_type_v1"])
+# silverConfig = SilverConfig("../vitruvian-deployment-configurations/", "excite", "int", "na-us-nj")
+# silverConfig.remove_table_entries(["compensation_v1", "kyc_result_v1"])
+# silverConfig.unpause_tables(["comp_type_v1"])
 # goldconfig = GoldConfig("../vitruvian-deployment-configurations/","excite","int","na-us-nj")
 # goldconfig.remove_tasks_from_workflow(["fct_compensation_event","fct_payment_event"])
 # cmt_config = CMTConfig("../vitruvian-deployment-configurations/", "excite", "na-us-nj")
-# cmt_config.update_artifact_version("1.0.524")
+# cmt_config.update_artifact_version("1.0.556")
