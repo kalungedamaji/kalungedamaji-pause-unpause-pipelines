@@ -36,18 +36,17 @@ class SilverConfig:
         for job, values in app_vars.items():
             if len(values) > 1 and isinstance(values[1], str):
                 for table_name in table_names:
-                    table_entry_str = f'{{ "database_name": "[^"]*", "table_name":"{table_name}" }}' + ","
+                    table_entry_str = (
+                        f'{{ "database_name": "[^"]*", "table_name":"{table_name}" }}'
+                        + ","
+                    )
                     matches = re.findall(table_entry_str, values[1])
                     if matches:
-                        print("Enrichment job::", job)
+                        print("\nEnrichment job::", job)
                         if job not in removed_matches:
                             removed_matches[job] = []
                         for match in matches:
                             print(f"Removing Matching record: {match}")
-                            removed_matches.setdefault(self.env, {}).setdefault(self.territory, {}).setdefault(
-                                job, []
-                            ).setdefault(table_name, {}).append(match)
-                        print(f"removed_matches: {removed_matches}")
                         values[1] = re.sub(table_entry_str, "", values[1])
 
         with open(app_vars_file, "w") as f:
@@ -59,12 +58,48 @@ class SilverConfig:
             json.dump(removed_matches, f, indent=4)
 
     def unpause_tables(self, table_names):
-        paused_file_path = "paused/removed-silver-tables.json"
+        metadata_file_path = os.path.join(
+            "metadata", f"{self.territory}-{self.env}-app-vars.json"
+        )
+        app_vars_file_path = os.path.join(
+            self.config_repo_path,
+            "configs",
+            "excite",
+            self.territory,
+            self.env,
+            "app_vars.json",
+        )
+        with open(metadata_file_path, "r") as f:
+            metadata = json.load(f)
 
-        # Step 1: Load the paused entries
-        with open(paused_file_path, "r") as f:
-            paused_entries = json.load(f)
+        with open(app_vars_file_path, "r") as f:
+            app_vars = json.load(f)
 
+        for table_name in table_names:
+            if table_name in metadata:
+                job_name = metadata[table_name]["job_name"]
+                value_string = metadata[table_name]["value"]
+
+                if job_name in app_vars:
+                    if table_name in app_vars[job_name][1]:
+                        raise ValueError(
+                            f"Error Processing::Table {table_name} already exists in {job_name}"
+                        )
+                    app_vars[job_name][1] = re.sub(
+                        r"\]$", f", {value_string}]", app_vars[job_name][1]
+                    )
+                    print("\nEnrichment job::", job_name)
+                    print(f"Adding table {value_string}")
+                else:
+                    raise ValueError(f"Job {job_name} not found in app_vars.json")
+            else:
+                raise ValueError(f"Table {table_name} not found in metadata")
+
+        with open(app_vars_file_path, "w") as f:
+            json.dump(app_vars, f, indent=4)
+            f.write("\n")
+
+    def build_metadata(self):
         config_dir = os.path.join(
             self.config_repo_path,
             "configs",
@@ -72,31 +107,41 @@ class SilverConfig:
             self.territory,
             self.env,
         )
-        app_vars_file = os.path.join(config_dir, "app_vars.json")
+        source_file_path = os.path.join(config_dir, "app_vars.json")
 
-        # Load app_vars.json
-        with open(app_vars_file, "r") as f:
-            app_vars = json.load(f)
+        if not os.path.isfile(source_file_path):
+            raise FileNotFoundError(f"No such file: {source_file_path}")
 
-        for table_name in table_names:
-            # Get the paused entries for table_name
-            for job_name, removed_entries in paused_entries.items():
-                # Filter to find a matching entry
-                matching_entries = [entry for entry in removed_entries if f'"table_name":"{table_name}"' in entry]
+        with open(source_file_path, "r") as source_file:
+            data = json.load(source_file)
 
-                # If we found a match, update app_vars
-                if matching_entries:
-                    print("Enrichment job::", job_name)
-                    print(f"matching_entries: {matching_entries}")
+        metadata = {}
 
-                    app_vars[job_name][1] += "".join(matching_entries)
-                    paused_entries[job_name] = [
-                        entry for entry in paused_entries[job_name] if entry not in matching_entries
-                    ]
+        # Traverse the jobs in the data
+        for job_name, values in data.items():
+            if len(values) > 1 and isinstance(values[1], str):
+                try:
+                    tables = json.loads(values[1])  # parse json string that has tables
+                except json.JSONDecodeError:
+                    raise ValueError(
+                        f"Invalid JSON string in the value array for {job_name}"
+                    )
 
-        with open(app_vars_file, "w") as f:
-            json.dump(app_vars, f, indent=4)
-            f.write("\n")
+                for table in tables:
+                    table_name = table["table_name"]
+                    if table_name in metadata:  # Check if table_name already exists
+                        raise ValueError(f"Duplicate table name detected: {table_name}")
 
-        with open(paused_file_path, "w") as f:
-            json.dump(paused_entries, f, indent=4)
+                    metadata[table_name] = {
+                        "value": json.dumps(table, separators=(",", ":")),
+                        "job_name": job_name,
+                    }
+
+        # save the metadata file
+        output_file_path = os.path.join(
+            "metadata", f"{self.territory}-{self.env}-app-vars.json"
+        )
+        with open(output_file_path, "w") as output_file:
+            json.dump(metadata, output_file, indent=4)
+
+        print(f"Metadata saved to: {output_file_path}")
