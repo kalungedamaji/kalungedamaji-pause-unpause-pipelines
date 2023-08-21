@@ -1,0 +1,138 @@
+{
+    "authentication_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_authentication\",\"table_name\":\"authentication_event_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "account_block_action_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"account_block_action_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "member_contact_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_contact_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "game_event_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_wallet\",\"table_name\":\"game_event_type_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "transaction_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_wallet\",\"table_name\":\"transaction_type_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "currency_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_site\",\"table_name\":\"currency_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "login_group_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_site\",\"table_name\":\"login_group_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "partner_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_site\",\"table_name\":\"partner_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "comp_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_reward_wallet\",\"table_name\":\"comp_category_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "comp_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_reward_wallet\",\"table_name\":\"comp_type_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "compensation_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_reward_wallet\",\"table_name\":\"compensation_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "gift_in_kind_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_reward_wallet\",\"table_name\":\"gift_in_kind_category_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "merchant_account_payment_method_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"merchant_account_payment_method_type_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "merchant_account_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"merchant_account_type_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "merchant_account_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"merchant_account_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "payment_service_provider_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"payment_service_provider_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-1"
+    },
+    "game_skin_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_gaming_wallet\",\"table_name\":\"game_skin_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-2"
+    },
+    "game_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_gaming_wallet\",\"table_name\":\"game_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-2"
+    },
+    "game_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_gaming_wallet\",\"table_name\":\"game_type_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-2"
+    },
+    "spend_limit_event": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_rg\",\"table_name\":\"spend_limit_event\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-2"
+    },
+    "member_kyc_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_verification\",\"table_name\":\"member_kyc_event_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-2"
+    },
+    "kyc_result_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_verification\",\"table_name\":\"kyc_result_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-2"
+    },
+    "country_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_site\",\"table_name\":\"country_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "member_high_risk_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_finance\",\"table_name\":\"member_high_risk_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "member_closed_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_closed_category_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "payment_account_card_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"payment_account_card_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "payment_account_risk_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"payment_account_risk_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "name_mismatch_status_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"name_mismatch_status_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "session_limit_event": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_rg\",\"table_name\":\"session_limit_event\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_parameters-3"
+    },
+    "member_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_priority_parameters"
+    },
+    "ref_bank_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_wallet\",\"table_name\":\"ref_bank_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_priority_parameters"
+    },
+    "member_closed_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_closed_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_priority_parameters"
+    },
+    "account_block_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"account_block_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_priority_parameters"
+    },
+    "payment_account_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"payment_account_v1\"}",
+        "job_name": "excite_eu_int_data-enrichment-app_priority_parameters"
+    }
+}
