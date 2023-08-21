@@ -1,3 +1,6 @@
 - add validation for possible input values
 - validate files for json issues
 - interactive command line
+- gold config
+  - unpause
+  - add to paused files while removing
