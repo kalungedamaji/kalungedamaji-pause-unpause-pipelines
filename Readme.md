@@ -1,5 +1,18 @@
 ### Utility to pause unpause pipelines
 
+#### project structure
+
+```
+project_root/
+|-- config_processors/
+| |-- cmt_config.py
+| |-- gold_config.py
+| |-- silver_config.py
+|
+|--run.py
+|--main.py
+```
+
 #### command line
 
 - still to improve, run via python for now
@@ -18,7 +31,7 @@ python3 main.py --config_repo_path ../vitruvian-deployment-configurations/ --sou
 
 #### run via python
 
-- open run.py and make supply params directly using python code
+- open run.py and supply params directly using python code
 - just run from vscode/ide or from terminal use command below
 
 ```
