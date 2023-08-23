@@ -1,0 +1,290 @@
+{
+    "game_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_wallet\",\"table_name\":\"game_event_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "authentication_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_authentication\",\"table_name\":\"authentication_event_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "account_block_action_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"account_block_action_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "account_entry_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_wallet\",\"table_name\":\"account_entry_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "bank_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_wallet\",\"table_name\":\"bank_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "game_event_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_wallet\",\"table_name\":\"game_event_type_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "transaction_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_wallet\",\"table_name\":\"transaction_type_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "currency_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_site\",\"table_name\":\"currency_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "login_group_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_site\",\"table_name\":\"login_group_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "partner_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_site\",\"table_name\":\"partner_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "comp_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_reward_wallet\",\"table_name\":\"comp_category_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "token_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_reward_wallet\",\"table_name\":\"token_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "comp_gift_in_kind_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_reward_wallet\",\"table_name\":\"comp_gift_in_kind_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "card_bin_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"card_bin_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "name_mismatch_status_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"name_mismatch_status_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "payment_account_card_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"payment_account_card_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "payment_account_risk_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"payment_account_risk_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "deposit_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"deposit_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "deposit": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"deposit\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "deposit_dispute_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"deposit_dispute_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "withdrawal_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"withdrawal_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "withdrawal": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"withdrawal\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "game_skin_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_gaming_wallet\",\"table_name\":\"game_skin_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "game_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_gaming_wallet\",\"table_name\":\"game_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "game_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_gaming_wallet\",\"table_name\":\"game_type_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "user_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_csp\",\"table_name\":\"user_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_closed_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_closed_event_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_verification_status_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_verification_status_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_closed_cause_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_closed_cause_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_closed_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_closed_category_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "registration_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"registration_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "account_update_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"account_update_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_contact_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_contact_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "failed_login": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_authentication\",\"table_name\":\"failed_login\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "twofactor": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_authentication\",\"table_name\":\"twofactor\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "financial_limit_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_rg\",\"table_name\":\"financial_limit_event_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "spend_limit_event": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_rg\",\"table_name\":\"spend_limit_event\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "country_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_site\",\"table_name\":\"country_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "campaign_audit_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"campaign_audit_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "command_audit_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"command_audit_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_high_risk_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_finance\",\"table_name\":\"member_high_risk_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_closed_status_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_closed_status_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_model_to_token_frequency_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_model_to_token_frequency_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_segmentation_value_token_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_segmentation_value_token_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "kyc_credit_file_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_verification\",\"table_name\":\"kyc_credit_file_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "marketing_preferences_audit_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"marketing_preferences_audit_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "customer_verification_profile_updated_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_verification\",\"table_name\":\"customer_verification_profile_updated_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "kyc_document_verified_v2": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_verification\",\"table_name\":\"kyc_document_verified_v2\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "high_roller_audit_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"high_roller_audit_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "mps_change_last_update_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"mps_change_last_update_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "mps_group_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"mps_group_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "refer_a_friend_signup_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_marketing\",\"table_name\":\"refer_a_friend_signup_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "session_limit_event": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_rg\",\"table_name\":\"session_limit_event\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "compensation_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_reward_wallet\",\"table_name\":\"compensation_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "gift_in_kind_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_reward_wallet\",\"table_name\":\"gift_in_kind_category_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "kyc_result_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_verification\",\"table_name\":\"kyc_result_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_bonus_game_prize_weighting_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_bonus_game_prize_weighting_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_bonus_game_win_probability_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_bonus_game_win_probability_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_instant_miss_win_probability_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_instant_miss_win_probability_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_instant_prize_weightings_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_instant_prize_weightings_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "ref_model_to_token_frequency_instant_win_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_free_game\",\"table_name\":\"ref_model_to_token_frequency_instant_win_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "comp_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_reward_wallet\",\"table_name\":\"comp_type_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "merchant_account_payment_method_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"merchant_account_payment_method_type_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "merchant_account_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"merchant_account_type_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "merchant_account_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"merchant_account_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "payment_service_provider_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"payment_service_provider_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_kyc_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_verification\",\"table_name\":\"member_kyc_event_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_parameters"
+    },
+    "member_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_priority_parameters"
+    },
+    "ref_bank_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_wallet\",\"table_name\":\"ref_bank_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_priority_parameters"
+    },
+    "member_closed_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"member_closed_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_priority_parameters"
+    },
+    "payment_account_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_payment\",\"table_name\":\"payment_account_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_priority_parameters"
+    },
+    "account_block_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_na_ca_on_silver_account\",\"table_name\":\"account_block_v1\"}",
+        "job_name": "excite_na-ca-on_prod_data-enrichment-app_priority_parameters"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "transaction_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_wallet\",\"table_name\":\"transaction_type_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "currency_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_site\",\"table_name\":\"currency_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "comp_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_reward_wallet\",\"table_name\":\"comp_type_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "gift_in_kind_category_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_reward_wallet\",\"table_name\":\"gift_in_kind_category_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "merchant_account_payment_method_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"merchant_account_payment_method_type_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "merchant_account_type_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"merchant_account_type_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "merchant_account_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"merchant_account_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "payment_service_provider_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_payment\",\"table_name\":\"payment_service_provider_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-1"
+    },
+    "kyc_result_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_verification\",\"table_name\":\"kyc_result_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-2"
+    },
+    "member_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_priority_parameters"
+    },
+    "member_kyc_event_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_verification\",\"table_name\":\"member_kyc_event_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_parameters-2"
+    }
+}
