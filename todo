@@ -1,6 +1,7 @@
 - add validation for possible input values
 - validate files for json issues
 - interactive command line
-- gold config
+- gold config/cmt
   - unpause
   - add to paused files while removing
+- create branch and git commits
