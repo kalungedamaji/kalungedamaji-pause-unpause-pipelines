@@ -35,12 +35,12 @@
         "value": "{\"database_name\":\"vitruvian_excite_eu_silver_verification\",\"table_name\":\"kyc_result_v1\"}",
         "job_name": "excite_eu_prod_data-enrichment-app_parameters-2"
     },
-    "member_v1": {
-        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_v1\"}",
-        "job_name": "excite_eu_prod_data-enrichment-app_priority_parameters"
-    },
     "member_kyc_event_v1": {
         "value": "{\"database_name\":\"vitruvian_excite_eu_silver_verification\",\"table_name\":\"member_kyc_event_v1\"}",
         "job_name": "excite_eu_prod_data-enrichment-app_parameters-2"
+    },
+    "member_v1": {
+        "value": "{\"database_name\":\"vitruvian_excite_eu_silver_account\",\"table_name\":\"member_v1\"}",
+        "job_name": "excite_eu_prod_data-enrichment-app_priority_parameters"
     }
 }
