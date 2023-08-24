@@ -42,14 +42,14 @@ def run_all_cmt(config_repo_path, source_system, cmt_version):
 # run_all_silver("../vitruvian-deployment-configurations/", "excite", ["comp_type_v1"])
 # run_all_gold("../vitruvian-deployment-configurations/", "excite", ["fct_compensation_event","fct_payment_event"])
 # run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.575")
-build_all_silver_metadata("../vitruvian-deployment-configurations/", "excite")
+# build_all_silver_metadata("../vitruvian-deployment-configurations/", "excite")
 
 silverConfig = SilverConfig(
     "../vitruvian-deployment-configurations/", "excite", "prod", "eu"
 )
 # silverConfig.remove_table_entries(["compensation_v1", "comp_type_v1"])
 # silverConfig.build_metadata()
-# silverConfig.unpause_tables(["member_kyc_event_v1"])
+silverConfig.unpause_tables(["comp_type_v1"])
 # goldconfig = GoldConfig("../vitruvian-deployment-configurations/","excite","int","na-us-nj")
 # goldconfig.remove_tasks_from_workflow(["fct_compensation_event","fct_payment_event"])
 # cmt_config = CMTConfig("../vitruvian-deployment-configurations/", "excite", "na-us-nj")

@@ -1,6 +1,7 @@
 import json
 import os
 import re
+from config_processors.silver_config_validator import SilverConfigValidator
 
 
 class SilverConfig:
@@ -11,6 +12,8 @@ class SilverConfig:
         self.territory = territory
 
     def remove_table_entries(self, table_names):
+        print("Removing tables: ", table_names)
+
         config_dir = os.path.join(
             self.config_repo_path,
             "configs",
@@ -53,11 +56,11 @@ class SilverConfig:
             json.dump(app_vars, f, indent=4)
             f.write("\n")
 
-        # Save the removed tables to the file
-        with open("paused/removed-silver-tables.json", "w") as f:
-            json.dump(removed_matches, f, indent=4)
+        self.validate_config_file(app_vars_file)
 
     def unpause_tables(self, table_names):
+        print("Unpausing tables: ", table_names)
+
         metadata_file_path = os.path.join(
             "metadata", f"{self.territory}-{self.env}-app-vars.json"
         )
@@ -98,6 +101,13 @@ class SilverConfig:
         with open(app_vars_file_path, "w") as f:
             json.dump(app_vars, f, indent=4)
             f.write("\n")
+
+        self.validate_config_file(app_vars_file_path)
+
+    def validate_config_file(self, app_vars_file_path):
+        validator = SilverConfigValidator()
+        if not validator.validate_config_file(app_vars_file_path):
+            raise ValueError(f"Invalid Config file: {app_vars_file_path}")
 
     def build_metadata(self):
         config_dir = os.path.join(
