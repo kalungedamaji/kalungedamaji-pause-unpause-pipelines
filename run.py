@@ -39,18 +39,37 @@ def run_all_cmt(config_repo_path, source_system, cmt_version):
         config.update_artifact_version(cmt_version)
 
 
+def run_all_silver_unpause(config_repo_path, source_system, table_names):
+    print("\n🥈 Updating Silver pipelines\n")
+    for env, territory in itertools.product(ENVS, TERRITORIES):
+        print("\nFor: ", env, territory, "\n-------------")
+        config = SilverConfig(config_repo_path, source_system, env, territory)
+        config.unpause_tables(table_names)
+
+
+# Run for all environments and territories
 # run_all_silver("../vitruvian-deployment-configurations/", "excite", ["comp_type_v1"])
+run_all_silver_unpause(
+    "../vitruvian-deployment-configurations/", "excite", ["comp_type_v1"]
+)
+
 # run_all_gold("../vitruvian-deployment-configurations/", "excite", ["fct_compensation_event","fct_payment_event"])
 # run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.575")
+
+# Build or refresh metadata for all silver tables
 # build_all_silver_metadata("../vitruvian-deployment-configurations/", "excite")
 
+#  Run for specific environment and territory
+
 silverConfig = SilverConfig(
-    "../vitruvian-deployment-configurations/", "excite", "prod", "eu"
+    "../vitruvian-deployment-configurations/", "excite", "prod", "na-us-nj"
 )
-# silverConfig.remove_table_entries(["compensation_v1", "comp_type_v1"])
+# silverConfig.remove_table_entries(["comp_type_v1"])
 # silverConfig.build_metadata()
-silverConfig.unpause_tables(["comp_type_v1"])
+# silverConfig.unpause_tables(["comp_type_v1"])
+
 # goldconfig = GoldConfig("../vitruvian-deployment-configurations/","excite","int","na-us-nj")
 # goldconfig.remove_tasks_from_workflow(["fct_compensation_event","fct_payment_event"])
+
 # cmt_config = CMTConfig("../vitruvian-deployment-configurations/", "excite", "na-us-nj")
 # cmt_config.update_artifact_version("1.0.556")
