@@ -13,6 +13,9 @@ project_root/
 |--main.py
 ```
 
+### List of todos/enhacements
+[Todos](todo.md)
+
 ### Metadata files
 
 - to aid in adding/removing tables the app_vars json files are parsed
