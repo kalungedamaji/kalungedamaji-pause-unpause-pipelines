@@ -12,6 +12,7 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 // Execute your Python script
+                sh 'pip3 install -r requirements.txt'
                 sh ' python3 run.py'
             }
         }
