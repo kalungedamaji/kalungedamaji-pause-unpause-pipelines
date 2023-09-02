@@ -1,4 +1,6 @@
 from git import Repo
+import git
+
 def commit_and_push_code(config_repo_path, branch_name, commit_message):
     print("\n Started committing the changes on branch  \n" + branch_name)
     PATH_OF_GIT_REPO = config_repo_path+'.git'  # make sure .git folder is properly configured
