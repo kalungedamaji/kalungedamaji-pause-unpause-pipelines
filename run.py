@@ -64,7 +64,7 @@ def pause_enrichment_app_for_one_env(config_repo_path, jira_ticket_no, data_sour
                          jira_ticket_no + " | un-paused table " + ', '.join(map(str, table_names)))
 
 # Run for all environments and territories
-run_all_silver("../pythonProject/vitruvian-deployment-configurations/", "DSE-10171", "excite",
+run_all_silver("../vitruvian-deployment-configurations/", "DSE-10171", "excite",
                ["command_audit_v1", "high_roller_audit_v1", "campaign_audit_v1"])
 # run_all_silver_unpause(
 #    "../vitruvian-deployment-configurations/", "excite", ["comp_type_v1"]

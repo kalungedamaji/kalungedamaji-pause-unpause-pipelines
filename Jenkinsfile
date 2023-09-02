@@ -14,8 +14,13 @@ pipeline {
             steps {
              script {
                     // Get the paths of the checked-out repositories
+                    sh 'ls'
+                    sh 'pwd'
+                    sh 'cd ..'
+                     sh 'ls'
+                    sh 'pwd'
                     def repo1Path = pwd() // Path of the first repository
-                    def repo2Path = "${pwd()}/../repo2" // Path of the second repository
+                    def repo2Path = "${pwd()}/../vitruvian-deployment-configurations" // Path of the second repository
 
                     echo "Path of Repository 1: ${repo1Path}"
                     echo "Path of Repository 2: ${repo2Path}"
