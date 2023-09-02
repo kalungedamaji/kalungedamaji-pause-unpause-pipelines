@@ -3,7 +3,6 @@ from config_processors.cmt_config import CMTConfig
 from config_processors.gold_config import GoldConfig
 from config_processors.silver_config import SilverConfig
 from git_operations.git_operation import commit_and_push_code
-from git_operations.git_operation  import checkout_configuration_repo
 ENVS = ["int", "prod"]
 TERRITORIES = ["na-us-nj", "na-us-pa", "na-ca-on", "eu"]
 
