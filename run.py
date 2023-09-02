@@ -3,7 +3,7 @@ from config_processors.cmt_config import CMTConfig
 from config_processors.gold_config import GoldConfig
 from config_processors.silver_config import SilverConfig
 from git_operations.git_operation import commit_and_push_code
-
+from git_operations.git_operation  import checkout_configuration_repo
 ENVS = ["int", "prod"]
 TERRITORIES = ["na-us-nj", "na-us-pa", "na-ca-on", "eu"]
 
@@ -63,7 +63,7 @@ def pause_enrichment_app_for_one_env(config_repo_path, jira_ticket_no, data_sour
     commit_and_push_code(config_repo_path, jira_ticket_no + "_un_pause_enrichment_app_for_" + region,
                          jira_ticket_no + " | un-paused table " + ', '.join(map(str, table_names)))
 
-
+checkout_configuration_repo()
 # Run for all environments and territories
 run_all_silver("../pythonProject/vitruvian-deployment-configurations/", "DSE-10171", "excite",
                ["command_audit_v1", "high_roller_audit_v1", "campaign_audit_v1"])
