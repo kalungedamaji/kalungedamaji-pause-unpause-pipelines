@@ -16,9 +16,10 @@ pipeline {
             def targetEnv = params.JIRA_TICKET_NUMBER
                 echo " Jira Ticket ${targetEnv}"
                  def currentDir = pwd()
-
+                 sh 'ls '
+                  sh 'pwd '
                     // Navigate to the previous directory
-              def parentDir = currentDir + '/../'
+              def parentDir = currentDir + '/../../../'
 
                     dir(parentDir) {
                   sh 'ls '
