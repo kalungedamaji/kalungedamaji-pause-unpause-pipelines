@@ -18,7 +18,9 @@ pipeline {
                  def currentDir = pwd()
 
                     // Navigate to the previous directory
-                    dir(currentDir) {
+              def parentDir = currentDir + '/../'
+
+                    dir(parentDir) {
                   sh 'ls '
                   sh 'pwd '
                 }
