@@ -12,20 +12,14 @@ pipeline {
         stage('Run Python Script') {
 
             steps {
-              script {
-            def targetEnv = params.JIRA_TICKET_NUMBER
-                echo " Jira Ticket ${targetEnv}"
-                 def currentDir = pwd()
-                 sh 'ls '
-                  sh 'pwd '
-                    // Navigate to the previous directory
-              def parentDir = currentDir + '/../../../'
+             script {
+                    // Get the paths of the checked-out repositories
+                    def repo1Path = pwd() // Path of the first repository
+                    def repo2Path = "${pwd()}/../repo2" // Path of the second repository
 
-                    dir(parentDir) {
-                  sh 'ls '
-                  sh 'pwd '
+                    echo "Path of Repository 1: ${repo1Path}"
+                    echo "Path of Repository 2: ${repo2Path}"
                 }
-           }
 
                 sh 'pip3 install -r requirements.txt'
                 sh ' python3 run.py'
