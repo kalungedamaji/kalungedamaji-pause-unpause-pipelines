@@ -32,7 +32,7 @@ def commit_and_push_code(config_repo_path, branch_name, commit_message):
 
 def checkout_configuration_repo():
     repo_url = "https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations"
-    local_directory = "/vitruvian-deployment-configurations"
+    local_directory = "/home/jenkins/agent/workspace/Vitruvian-Data/Excite/vitruvian-deployment-configurations"
 
     # Clone the GitHub repository to the local directory
     repo = git.Repo.clone_from(repo_url, local_directory)

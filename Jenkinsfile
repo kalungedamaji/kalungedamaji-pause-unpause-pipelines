@@ -17,7 +17,7 @@ pipeline {
                 echo " Jira Ticket ${targetEnv}"
            }
                 // Execute your Python script
-                sh 'cd .. '
+                sh 'cd ../.. '
                 sh 'ls '
                 sh 'pwd '
                 sh 'pip3 install -r requirements.txt'
