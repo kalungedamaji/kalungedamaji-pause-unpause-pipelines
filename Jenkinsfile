@@ -6,6 +6,8 @@ pipeline {
             steps {
                 // Checkout the source code from your SCM
                 checkout scm
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations']]])
+
             }
         }
 
