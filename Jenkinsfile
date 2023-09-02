@@ -16,9 +16,13 @@ pipeline {
             def targetEnv = params.JIRA_TICKET_NUMBER
                 echo " Jira Ticket ${targetEnv}"
            }
-                // Execute your Python script\
-                sh 'ls '
-                sh 'pwd '
+              def currentDir = pwd()
+
+                    // Navigate to the previous directory
+                    dir(currentDir) {
+                  sh 'ls '
+                  sh 'pwd '
+                }
                 sh 'pip3 install -r requirements.txt'
                 sh ' python3 run.py'
             }
