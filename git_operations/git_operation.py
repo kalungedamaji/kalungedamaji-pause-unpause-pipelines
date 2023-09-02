@@ -1,5 +1,5 @@
 from git import Repo
-import git
+
 
 def commit_and_push_code(config_repo_path, branch_name, commit_message):
     print("\n Started committing the changes on branch  \n" + branch_name)
@@ -30,18 +30,3 @@ def commit_and_push_code(config_repo_path, branch_name, commit_message):
     repo.git.checkout(main_branch)
     print("\n Pushed changes to the branch " + branch_name)
 
-def checkout_configuration_repo():
-    repo_url = "https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations"
-    local_directory = "/home/jenkins/agent/workspace/Vitruvian-Data/Excite/vitruvian-deployment-configurations"
-
-    # Clone the GitHub repository to the local directory
-    repo = git.Repo.clone_from(repo_url, local_directory)
-
-    # Optionally, you can perform additional Git operations on the repository if needed
-    # For example, you can fetch, pull, or commit changes programmatically
-
-    # Fetch updates from the remote repository (equivalent to 'git fetch' command)
-    repo.remotes.origin.fetch()
-
-    # Pull changes from the remote repository (equivalent to 'git pull' command)
-    repo.remotes.origin.pull()
