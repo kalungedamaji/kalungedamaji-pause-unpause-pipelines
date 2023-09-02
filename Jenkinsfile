@@ -10,11 +10,12 @@ pipeline {
         }
 
         stage('Run Python Script') {
-           script {
+
+            steps {
+              script {
             def targetEnv = params.JIRA_TICKET_NUMBER
                 echo " Jira Ticket ${targetEnv}"
            }
-            steps {
                 // Execute your Python script
 
                 sh 'pip3 install -r requirements.txt'
