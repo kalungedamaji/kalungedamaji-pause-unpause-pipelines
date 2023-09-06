@@ -7,17 +7,18 @@ pipeline {
     }
 
     stages {
-        stage('Checkout pause unpause repo') {
+
+    stage('Checkout deployment-configurations') {
             steps {
-                checkout scm
+               def repo1Path = "${env.WORKSPACE}/vitruvian-deployment-configurations"
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS,dir: repo1Path]]])
 
             }
         }
-        stage('Checkout deployment-configurations') {
+
+        stage('Checkout pause unpause repo') {
             steps {
-
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
-
+                checkout scm
             }
         }
 
