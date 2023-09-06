@@ -10,9 +10,8 @@ pipeline {
 
     stage('Checkout deployment-configurations') {
       steps {
-             script{
-               def repo1Path = "${env.WORKSPACE}/vitruvian_deployment_configurations"
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]],poll: false, changelog: false,dir: repo1Path)
+            dir('subDir1') {
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
                    sh 'ls'
                     sh 'pwd'
                 }
@@ -21,7 +20,9 @@ pipeline {
 
      stage('Checkout pause unpause repo') {
             steps {
+            dir('subDir2') {
                 checkout scm
+                }
             }
         }
 
