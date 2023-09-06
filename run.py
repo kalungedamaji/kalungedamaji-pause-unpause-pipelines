@@ -14,7 +14,6 @@ def run_all_silver(config_repo_path, jira_ticket_no, source_system, table_names)
         print("\nFor: ", env, territory, "\n-------------")
         config = SilverConfig(config_repo_path, source_system, env, territory)
         config.remove_table_entries(table_names)
-
     commit_and_push_code(config_repo_path, jira_ticket_no + "_pause_enrichment_app_for_all_env",
                          jira_ticket_no + " | Paused table " + ', '.join(map(str, table_names)))
 
