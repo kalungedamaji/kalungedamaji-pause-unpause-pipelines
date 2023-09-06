@@ -12,24 +12,20 @@ pipeline {
                        sh 'rm -rf *'
                     }
                }
-                stage('Checkout deployment-configurations') {
+                stage('Checkout Repos') {
                   steps {
 
                         dir('vitruvian_deployment_configurations') {
                             checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
                         }
+
+                         dir('pause_unpause_pipeline') {
+                             checkout scm
+                         }
+
                   }
 
                 }
-
-                 stage('Checkout pause unpause repo') {
-                        steps {
-
-                           dir('pause_unpause_pipeline') {
-                             checkout scm
-                             }
-                        }
-                 }
 
                  stage('Run Python Script') {
 
