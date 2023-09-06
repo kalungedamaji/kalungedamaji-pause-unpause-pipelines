@@ -16,7 +16,7 @@ pipeline {
                        sh 'rm -rf *'
                     }
                }
-                stage('Checkout Repos') {
+               stage('Checkout Repos') {
                   steps {
 
                         dir('vitruvian--deployment-configurations') {
@@ -31,18 +31,18 @@ pipeline {
 
                 }
 
-                 stage('Run Python Script') {
-                       script {
-                            def jira_ticket_number = params.JIRA_TICKET_NUMBER
-                            echo "jira_ticket_number ${jira_ticket_number}"
+               stage('Run Python Script') {
                             steps {
+                               script {
+                                  def jira_ticket_number = params.JIRA_TICKET_NUMBER
+                                  echo "jira_ticket_number ${jira_ticket_number}"
                                   dir('pause_unpause_pipeline') {
 
                                      sh 'pip3 install -r requirements.txt'
                                       sh ' python3 run.py'
                                   }
+                              }
                             }
-                       }
-                 }
+               }
     }
 }
