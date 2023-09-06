@@ -9,6 +9,12 @@ pipeline {
     stages {
 
     stage('Checkout deployment-configurations') {
+
+     stage('Checkout pause unpause repo') {
+            steps {
+                checkout scm
+            }
+        }
             steps {
              script{
                def repo1Path = "${env.WORKSPACE}/vitruvian-deployment-configurations"
@@ -17,11 +23,7 @@ pipeline {
             }
         }
 
-        stage('Checkout pause unpause repo') {
-            steps {
-                checkout scm
-            }
-        }
+
 
         stage('Run Python Script') {
 
