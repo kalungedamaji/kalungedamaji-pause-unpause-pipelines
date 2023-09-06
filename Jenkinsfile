@@ -3,7 +3,7 @@ pipeline {
 
      environment {
         // Define the credential ID for either SSH or PAT
-        GITHUB_CREDENTIAL = credentials('sys_DW_ldap')
+         GIT_CREDENTIALS = "github-data-credentials"
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Checkout the source code from your SCM
                 checkout scm
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GITHUB_CREDENTIAL]]])
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
 
             }
         }
