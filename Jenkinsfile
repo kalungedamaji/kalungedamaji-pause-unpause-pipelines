@@ -36,13 +36,13 @@ pipeline {
                                script {
                                   def jira_ticket_number = params.JIRA_TICKET_NUMBER
                                   echo "jira_ticket_number ${jira_ticket_number}"
-                                  dir('vitruvian--deployment-configurations') {
+                                  dir('pause_unpause_pipeline') {
 
-                                     sh '../pause_unpause_pipeline/pip3 install -r requirements.txt'
-                                      sh '../pause_unpause_pipeline/python3 run.py'
+                                     sh 'pip3 install -r requirements.txt'
+                                      sh ' python3 run.py'
                                   }
                               }
                             }
-               }
+                 }
     }
 }
