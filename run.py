@@ -89,7 +89,7 @@ def update_cmt_version_for_one_env(config_repo_path, jira_ticket_no, data_source
 #                                 "na-us-pa",
 #                                 ["fct_account_closure_event"])
 
-update_cmt_version_for_one_env("../vitruvian_deployment_configurations/", "DSE_10145", "excite",
+update_cmt_version_for_one_env("/home/jenkins/agent/workspace/Vitruvian-Data/Excite/pause_un_pause/vitruvian_deployment_configurations/", "DSE_10145", "excite",
                                "na-us-pa", '1.0.598')
 # run_all_gold("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite", ["fct_account_closure_event"])
 # run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.575")
