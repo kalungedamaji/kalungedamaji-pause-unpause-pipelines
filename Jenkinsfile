@@ -10,46 +10,29 @@ pipeline {
 
     stage('Checkout deployment-configurations') {
       steps {
-            dir('subDir1') {
+            dir('vitruvian_deployment_configurations') {
                 checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
-                   sh 'ls'
-                    sh 'pwd'
                 }
             }
     }
 
      stage('Checkout pause unpause repo') {
             steps {
-            dir('subDir2') {
-                checkout scm
-                }
+
+               dir('pause_unpause_pipeline') {
+                 checkout scm
+                 }
             }
-        }
+     }
 
-
-
-
-
-        stage('Run Python Script') {
+     stage('Run Python Script') {
 
             steps {
-             script {
-                    // Get the paths of the checked-out repositories
-                    sh 'ls'
-                    sh 'pwd'
-                    sh 'cd ..'
-                     sh 'ls'
-                    sh 'pwd'
-                    def repo1Path = pwd() // Path of the first repository
-                    def repo2Path = "${pwd()}/../vitruvian-deployment-configurations" // Path of the second repository
+                  dir('pause_unpause_pipeline') {
 
-                    echo "Path of Repository 1: ${repo1Path}"
-                    echo "Path of Repository 2: ${repo2Path}"
-                }
-
-                sh 'pip3 install -r requirements.txt'
-                sh ' python3 run.py'
+                     sh 'pip3 install -r requirements.txt'
+                    sh ' python3 run.py'
+                  }
             }
-        }
-    }
+     }
 }
