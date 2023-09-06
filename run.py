@@ -79,9 +79,9 @@ def update_cmt_version_for_one_env(config_repo_path, jira_ticket_no, data_source
 
 
 # Run for all environments and territories
-#run_all_silver("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite",
+run_all_silver("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite",
 #               ["member_closed_event_v1", "member_closed_cause_v1", "marketing_preferences_audit_v1"])
-run_all_silver_unpause("../vitruvian_deployment_configurations/", "DSE_10145", "excite",
+#run_all_silver_unpause("../vitruvian_deployment_configurations/", "DSE_10145", "excite",
                        ["member_closed_event_v1", "member_closed_cause_v1", "marketing_preferences_audit_v1"])
 # pause_enrichment_app_for_one_env("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite", "int", "na-us-pa",
 #                       ["member_closed_event_v1", "member_closed_cause_v1"])
