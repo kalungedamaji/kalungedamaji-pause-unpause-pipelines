@@ -12,7 +12,7 @@ def commit_and_push_code(config_repo_path, branch_name, commit_message):
     repo.git.checkout(main_branch)
 
     # Fetch the latest changes from the remote
-    repo.remotes.origin.fetch()
+    #repo.remotes.origin.fetch()
 
     # Create  New Branch
     new_branch = repo.create_head(branch_name)
