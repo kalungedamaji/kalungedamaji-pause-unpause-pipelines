@@ -7,11 +7,16 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout pause unpause repo') {
             steps {
-                // Checkout the source code from your SCM
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
                 checkout scm
+
+            }
+        }
+        stage('Checkout deployment-configurations') {
+            steps {
+
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
 
             }
         }
