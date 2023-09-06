@@ -7,9 +7,14 @@ pipeline {
     }
 
     stages {
-
+               stage('Clean workspace') {
+                    steps {
+                       sh 'rm -rf *'
+                    }
+               }
                 stage('Checkout deployment-configurations') {
                   steps {
+
                         dir('vitruvian_deployment_configurations') {
                             checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
                         }
