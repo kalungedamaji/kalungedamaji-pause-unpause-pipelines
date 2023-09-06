@@ -80,8 +80,8 @@ def update_cmt_version_for_one_env(config_repo_path, jira_ticket_no, data_source
 
 
 # Run for all environments and territories
-#run_all_silver("../vitruvian_deployment_configurations/", "DSE_10146", "excite",
-#               ["member_closed_event_v1", "member_closed_cause_v1", "marketing_preferences_audit_v1"])
+run_all_silver_unpause("../vitruvian_deployment_configurations/", "DSE_10146", "excite",
+               ["member_closed_event_v1", "member_closed_cause_v1", "marketing_preferences_audit_v1"])
 #run_all_silver("../vitruvian_deployment_configurations/", "DSE_10145", "excite",
 #                       ["member_closed_event_v1", "member_closed_cause_v1", "marketing_preferences_audit_v1"])
 # pause_enrichment_app_for_one_env("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite", "int", "na-us-pa",
@@ -90,8 +90,8 @@ def update_cmt_version_for_one_env(config_repo_path, jira_ticket_no, data_source
 #                                 "na-us-pa",
 #                                 ["fct_account_closure_event"])
 
-update_cmt_version_for_one_env("../vitruvian_deployment_configurations/", "DSE_10145", "excite",
-                               "na-us-pa", '1.0.598')
+#update_cmt_version_for_one_env("../vitruvian_deployment_configurations/", "DSE_10145", "excite",
+#                               "na-us-pa", '1.0.598')
 # run_all_gold("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite", ["fct_account_closure_event"])
 # run_all_cmt("../vitruvian-deployment-configurations/", "excite", "1.0.575")
 #run_all_cmt("../pythonProject/vitruvian-deployment-configurations/", "DSE_10145", "excite","1.0.599")
