@@ -14,11 +14,9 @@ pipeline {
                stage('Clean workspace') {
                     steps {
                        sh 'rm -rf *'
-                       script{
-                           def myCredentials = credentials(GIT_CREDENTIALS)
-                           echo "Username: ${myCredentials.username}"
-                           echo "Password: ${myCredentials.password.secret}"
-                        }
+                       withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS, passwordVariable: 'MY_PASSWORD', usernameVariable: 'MY_USERNAME')]) {
+                                                 echo "Using username: $MY_USERNAME"
+                                                  }
                     }
                }
                stage('Checkout Repos') {
