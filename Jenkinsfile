@@ -18,9 +18,13 @@ pipeline {
                }
                stage('Checkout Repos') {
                   steps {
+                     def myCredentials = credentials(GIT_CREDENTIALS)
+                        echo "Username: ${myCredentials.username}"
+                        echo "Password: ${myCredentials.password.secret}"
 
                         dir('vitruvian--deployment-configurations') {
                             checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
+
                         }
 
                          dir('pause_unpause_pipeline') {
