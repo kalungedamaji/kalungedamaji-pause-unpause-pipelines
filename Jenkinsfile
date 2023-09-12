@@ -7,7 +7,7 @@ pipeline {
 
      environment {
         // Define the credential ID for either SSH or PAT
-         GIT_CREDENTIALS = "github-data-credentials"
+         GIT_CREDENTIALS = "damaji-kalunge"
     }
 
     stages {
