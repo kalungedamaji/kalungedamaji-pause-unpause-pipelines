@@ -14,14 +14,12 @@ pipeline {
                stage('Clean workspace') {
                     steps {
                        sh 'rm -rf *'
-                    }
-                     steps {
                        script{
                            def myCredentials = credentials(GIT_CREDENTIALS)
                            echo "Username: ${myCredentials.username}"
                            echo "Password: ${myCredentials.password.secret}"
                         }
-                      }
+                    }
                }
                stage('Checkout Repos') {
                   steps {
