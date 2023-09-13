@@ -7,7 +7,7 @@ pipeline {
 
      environment {
         // Define the credential ID for either SSH or PAT
-         GIT_CREDENTIALS = "damaji-kalunge"
+         GIT_CREDENTIALS = "github-data-credentials"
     }
 
     stages {
@@ -16,7 +16,9 @@ pipeline {
                        sh 'rm -rf *'
                        withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS, passwordVariable: 'MY_PASSWORD', usernameVariable: 'MY_USERNAME')]) {
                                                  echo "Using username: $MY_USERNAME"
-                                                  }
+                                                  sh "git config --global user.name  $MY_USERNAME"
+                                                  sh "git config --global credential.helper $MY_PASSWORD"
+                                                 }
                     }
                }
                stage('Checkout Repos') {
