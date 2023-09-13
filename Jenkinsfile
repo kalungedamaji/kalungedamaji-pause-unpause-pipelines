@@ -14,19 +14,19 @@ pipeline {
                stage('Clean workspace') {
                     steps {
                        sh 'rm -rf *'
-                       withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS, passwordVariable: 'MY_PASSWORD', usernameVariable: 'MY_USERNAME')]) {
-                                                 echo "Using username: $MY_USERNAME"
-                                                  sh "git config --global user.name  $MY_USERNAME"
-                                                  sh "git config --global credential.helper $MY_PASSWORD"
-                                                 }
                     }
+
                }
                stage('Checkout Repos') {
                   steps {
 
                         dir('vitruvian--deployment-configurations') {
-                            checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
-
+                               checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.gamesys.co.uk/Data/vitruvian-deployment-configurations', credentialsId: env.GIT_CREDENTIALS]]])
+                                withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS, passwordVariable: 'MY_PASSWORD', usernameVariable: 'MY_USERNAME')]) {
+                                                 echo "Using username: $MY_USERNAME"
+                                                  sh "git config --global user.name  $MY_USERNAME"
+                                                  sh "git config --global credential.helper $MY_PASSWORD"
+                                                 }
                         }
 
                          dir('pause_unpause_pipeline') {
